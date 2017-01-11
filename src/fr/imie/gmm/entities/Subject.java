@@ -28,7 +28,7 @@ public class Subject {
 	@Column(nullable = true)
     private int groupSize;
 	@Column (nullable = false)
-	private Teacher createBy;
+	private Teacher author;
 	@Column
     private List <Promotion> promotion;
     
@@ -99,11 +99,11 @@ public class Subject {
 
 
 	public Teacher getCreateBy() {
-		return createBy;
+		return author;
 	}
 
 	public void setCreateBy(Teacher createBy) {
-		this.createBy = createBy;
+		this.author = createBy;
 	}
 
 
@@ -129,9 +129,13 @@ public class Subject {
 			this.deadline = deadline;
 			this.description = description;
 			this.promotion = new ArrayList<Promotion>();
-			this.createBy = new Teacher ();
+			this.author = new Teacher ();
 	}
 
+	// Empty constructor
+	public Subject (){
+		
+	}
 	
 	
 

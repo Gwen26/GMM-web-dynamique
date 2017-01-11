@@ -1,13 +1,23 @@
 package fr.imie.gmm.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Group {
 
   
 
     // Attributs de la Classe
     
-    private Integer id;
-    private String group_name;
+	@Id
+	@GeneratedValue(strategy= GenerationType.AUTO)
+    private int id;
+	@Column(nullable= false, length=35)
+    private String groupName;
     
     /**
      * Getters and Setters
@@ -16,24 +26,29 @@ public class Group {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
 	public String getGroup_name() {
-		return group_name;
+		return groupName;
 	}
 
 	public void setGroup_name(String group_name) {
-		this.group_name = group_name;
+		this.groupName = group_name;
 	}
 	
 	/**
 	 * Constructeur
 	 */
-	public Group(Integer id, String Group_name){
+	public Group(int id, String Group_name){
 		this.id= id;
-		this.group_name = group_name;
+		this.groupName = groupName;
+	}
+	
+	//Empty constructor
+	public Group (){
+		
 	}
    
     // Fonctions de la Classe Group
