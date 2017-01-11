@@ -1,18 +1,35 @@
 package fr.imie.gmm.entities;
 import java.util.*;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.print.attribute.standard.DateTimeAtCompleted;
 
+import com.sun.javafx.beans.IDProperty;
+
+@Entity
 public class Subject {
 
   
-    
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
+	@Column (nullable=false, length = 200)
     private String title;
+	@Column (nullable = false)
     private Date createAt;
-    private Date deadline;
+	@Column (nullable = false)
+    private DateTimeAtCompleted deadline;
+	@Column(nullable = false)
     private String description;
+	@Column(nullable = true)
     private int groupSize;
-    private Teacher createBy;
+	@Column (nullable = false)
+	private Teacher createBy;
+	@Column
     private List <Promotion> promotion;
     
     
@@ -51,11 +68,11 @@ public class Subject {
 
 
 	
-	public Date getDeadline() {
+	public DateTimeAtCompleted getDeadline() {
 		return deadline;
 	}
 
-	public void setDeadline(Date deadline) {
+	public void setDeadline(DateTimeAtCompleted deadline) {
 		this.deadline = deadline;
 	}
 
@@ -106,7 +123,7 @@ public class Subject {
 	 * Constructeur
 	 */
 
-	public Subject(String title, Date createAt, Date deadline, String description,String promotion, String teacher) {
+	public Subject(String title, Date createAt, DateTimeAtCompleted deadline, String description,String promotion, String teacher) {
 			this.title= title;
 			this.createAt = createAt;
 			this.deadline = deadline;
@@ -126,7 +143,7 @@ public class Subject {
    }
 
        
-   public void createSubject (int groupSize, Date deadline){
+   public void createSubject (int groupSize, DateTimeAtCompleted deadline){
    	this.groupSize = groupSize;
    	this.deadline = deadline;
    }
