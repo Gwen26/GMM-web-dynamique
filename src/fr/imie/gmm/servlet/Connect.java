@@ -1,5 +1,5 @@
 package fr.imie.gmm.servlet;
 
-public class Subscription {
+public class Connect {
 
 }
