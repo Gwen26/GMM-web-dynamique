@@ -117,20 +117,21 @@ public class Subject {
 
 	
 	
-    /**
-     * Méthodes de la classe
-     */
-    public void consult() {
-        
-    }
 
-        
-    public void createSubject (int groupSize, Date deadline){
-    	this.groupSize = groupSize;
-    	this.deadline = deadline;
-    }
-    
-    public void delete(){}
+	 /**
+    * Méthodes de la classe
+    */
+   public void consult() {
+       
+   }
+
+       
+   public void createSubject (int groupSize, Date deadline){
+   	this.groupSize = groupSize;
+   	this.deadline = deadline;
+   }
+   
+   public void delete(){}
 
 
 
