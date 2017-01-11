@@ -12,8 +12,12 @@
 hs_err_pid*
 
 **C:\Users\Guénaëlle\Workspace2\GMM_JEE\src\META-INF\persistence.xml
+**C:\glassfish4
+
 
 **C:\glassfish4
 **/home/micka/glassfish4
 **/home/micka/tomcat
 **/home/micka/workspace-poe/demoJpa
+
+*.classpath
