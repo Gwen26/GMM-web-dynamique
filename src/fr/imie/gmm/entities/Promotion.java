@@ -1,13 +1,22 @@
 package fr.imie.gmm.entities;
 import java.util.*;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Promotion {
 
   
-    
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private int id;
+    @Column(nullable = false, length = 20)
     private String name;
+    @Column 
     private Integer year;
     
     /**
@@ -16,7 +25,7 @@ public class Promotion {
 	public Integer getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -33,13 +42,18 @@ public class Promotion {
 	}
 
 	  /**
-     * Default constructor
+     *  constructor
      */
-    public Promotion(Integer id, String Name, Integer Year) {
+    public Promotion(int id, String Name, Integer Year) {
     	this.id= id;
     	this.name= name;
     	this.year= year;
     }
 
-
+    // empty constructor
+    
+    public Promotion (){
+    	
+    }
+    
 }
