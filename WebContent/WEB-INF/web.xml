@@ -10,4 +10,16 @@
   		<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
   	</jsp-property-group>
   </jsp-config>
+  
+  <servlet>
+        <servlet-name>GMM-web-dynamique</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GMM-web-dynamique</servlet-name>
+        <url-pattern>*.htm</url-pattern>
+    </servlet-mapping>
+
 </web-app>

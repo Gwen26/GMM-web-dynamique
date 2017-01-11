@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.print.attribute.standard.DateTimeAtCompleted;
 
-import com.sun.javafx.beans.IDProperty;
+
 
 @Entity
 public class Subject {
